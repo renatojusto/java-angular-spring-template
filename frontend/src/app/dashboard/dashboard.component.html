@@ -1,0 +1,37 @@
+<div class="po-wrapper">
+  <po-menu
+    [p-menus]="menus"
+    [p-filter]="filter">
+  </po-menu>
+
+  <po-toolbar
+    p-actions-icon="po-icon-manufacture"
+    [p-actions]="actions"
+    [p-profile]="profile"
+    [p-profile-actions]="profileActions"
+  >
+  </po-toolbar>
+
+  <po-page-detail p-title="Ordem de Produção" [p-breadcrumb]="breadcrumb">
+    <div class="po-row po-mb-4">
+      <po-divider class="po-md-12" p-label="Status"></po-divider>
+
+
+    </div>
+
+    <div class="po-row po-mb-4">
+      <po-divider class="po-md-12" p-label="Informações"></po-divider>
+      <po-info class="po-md-4" p-label="User ID" [p-value]="userId"></po-info>
+      <po-info class="po-md-4 po-mb-md-2" p-label="Produto" [p-value]="name"></po-info>
+      <po-tag class="po-md-4" p-icon p-label="Status" [p-type]="success" [p-value]="statusValue"></po-tag>
+      <po-info class="po-md-4 po-mb-md-2" p-label="Nickname" [p-value]="nickname"></po-info>
+    </div>
+
+    <div class="po-row po-mb-4">
+      <po-divider class="po-md-12" p-label="Intermediário"></po-divider>
+      <po-info class="po-md-4" p-label="Father's name" [p-value]="fathersName"></po-info>
+      <po-info class="po-md-4" p-label="Mother's name" [p-value]="mothersName"></po-info>
+    </div>
+  </po-page-detail>
+
+</div>

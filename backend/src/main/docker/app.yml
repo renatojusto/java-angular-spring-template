@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+  app:
+    image: renatoalejusto/templatestack
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      # MySql
+      # - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/db-templatestack?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
+      # Postgres
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/db-templatestack
+      - APP_START_SLEEP=30 # gives time for other services to boot before the application
+    ports:
+      - 8081:8081
+    depends_on:
+      - postgres
+#      - mysql
+#  mysql:
+#    extends:
+#      file: mysql.yml
+#      service: mysql
+  postgres:
+    extends:
+      file: postgres.yml
+      service: postgres
+
+networks:
+  backend-network:
+    driver: bridge

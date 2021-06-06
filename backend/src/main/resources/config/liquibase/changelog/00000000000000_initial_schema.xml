@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <changeSet author="renato.justo" id="00000000000001">
+        <createTable tableName="projetista">
+            <column autoIncrement="${autoIncrement}" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="supplier_pk"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_creation" type="timestamp" defaultValueComputed="current_timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_last_update" type="timestamp"/>
+            <column name="version" type="BIGINT" defaultValueComputed="0">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <loadData
+                file="config/liquibase/data/projetistas.csv"
+                separator=";"
+                tableName="projetista">
+            <column name="name" type="string"/>
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

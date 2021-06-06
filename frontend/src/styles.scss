@@ -1,0 +1,157 @@
+/* You can add global styles to this file, and also import other style files */
+/*-------------------- GLOBAL CSS HELP --------------------*/
+.hlp-no-padding {
+  padding: 0;
+}
+
+.hlp-no-padding-right {
+  padding-right: 0;
+}
+
+.hlp-no-padding-left {
+  padding-left: 0;
+}
+
+.hlp-margin-top-5 {
+  margin-top: 5px;
+}
+
+.hlp-margin-top-10 {
+  margin-top: 10px;
+}
+
+.hlp-margin-top-15 {
+  margin-top: 15px;
+}
+
+.hlp-margin-top-20 {
+  margin-top: 20px;
+}
+
+.hlp-margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.hlp-margin-right-20 {
+  margin-right: 20px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+/*-------------------- PO-UI CUSTOMIZATION --------------------*/
+
+.po-menu-item:hover {
+  color: white !important;
+}
+
+.po-toolbar {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #fbfbfb !important;
+}
+
+.po-container {
+  background-color: white !important;
+}
+
+:root {
+  --color-primary: #1E90B5;
+  --color-secondary: #1E90B5;
+  --background-color: #273033;
+  --background-color-hover: #1b2223;
+  --background-page-default: #fbfbfb;
+  --color-border-default: #3d4548;
+
+  /*-------------------- PAGE--------------------*/
+
+  --color-page-background-color-page: var(--background-page-default);
+
+  /*-------------------- MENU --------------------*/
+
+  --color-menu-color-menu-collapse-icon: var(--color-primary);
+  --color-menu-color-menu-item-text: var(--color-primary);
+  --color-menu-color-menu-item-selected: var(--color-white);
+  --color-menu-color-menu-sub-item-text: var(--color-danger-light-40);
+  --color-menu-color-menu-sub-item-selected: var(--color-neutral-dark-60);
+  --color-menu-color-menu-responsive: var(--color-white);
+
+  --color-menu-background-color-item-grouper-up-hover: var(--color-neutral-light-98);
+  --color-menu-background-color-item-hover: var(--background-color-hover);
+  --color-menu-background-color-item-selected: var(--background-color-hover);
+  --color-menu-background-color-menu: var(--background-color);
+  --color-menu-background-color-menu-responsive-overlay: var(--color-secondary-dark-60-alpha-70);
+  --color-menu-background-color-responsive: var(--color-neutral-light-98);
+  --color-menu-background-color-sub-items: var(--color-neutral-light-98);
+  --color-menu-background-color-sub-item-selected: var(--color-neutral-light-80);
+
+  --color-menu-border-color-menu-item-selected: var(--color-primary);
+  --color-menu-border-left-item: var(--color-transparent);
+  --color-menu-border-top-item-grouper-up-hover: var(--color-neutral-light-80);
+  --color-menu-border-top-logo: var(--color-border-default);
+  --color-menu-border-top-collapse-button: var(--color-neutral-alpha-45);
+
+  /*-------------------- BUTTON DEFAULT --------------------*/
+
+  --color-button-background-color: var(--color-white);
+  --color-button-border: var(--color-primary);
+  --color-button-color: var(--color-primary);
+
+  --color-button-background-color-hover: var(--color-white);
+  --color-button-border-hover: var(--background-color);
+  --color-button-color-hover: var(--background-color);
+
+  --color-button-background-color-pressed: var(--color-white);
+  --color-button-border-pressed: var(--background-color);
+  --color-button-color-pressed: var(--background-color);
+
+  --color-button-background-color-disabled: var(--color-white);
+  --color-button-border-disabled: var(--background-color);
+  --color-button-color-disabled: var(--background-color);
+
+  /*-------------------- BUTTON PRIMARY --------------------*/
+
+  --color-button-background-color-primary: var(--color-primary);
+  --color-button-border-primary: var(--color-primary);
+  --color-button-color-primary: var(--color-white);
+
+  --color-button-background-color-primary-hover: var(--background-color);
+  --color-button-border-primary-hover: var(--background-color);
+  --color-button-color-primary-hover: var(--color-primary);
+
+  --color-button-background-color-primary-pressed: var(--background-color);
+  --color-button-border-primary-pressed: var(--background-color);
+  --color-button-color-primary-pressed: var(--color-primary);
+
+  --color-button-background-color-primary-disabled: var(--background-color);
+  --color-button-border-primary-disabled: var(--background-color);
+  --color-button-color-primary-disabled: var(--color-primary);
+
+  /*-------------------- Button Link --------------------*/
+
+  --color-button-color-link-hover: var(--background-color);
+  --color-button-color-link-pressed: var(--background-color);
+
+
+  /*-------------------- TABLE --------------------*/
+
+  --color-table-box-shadow-footer: var(--color-primary);
+  --color-table-box-shadow-header: var(--color-primary);
+
+  /*-------------------- BREADCRUMB --------------------*/
+
+  --color-breadcrumb-color-item-link-hover: var(--background-color);
+  --color-table-color-single-action-hover: var(--background-color);
+
+  /*-------------------- SWITCH --------------------*/
+
+  --color-switch-box-shadow-color-focusable: var(--background-color);
+
+}
+

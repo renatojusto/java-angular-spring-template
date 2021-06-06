@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>frontend</module>
+        <module>backend</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.templatestack</groupId>
+    <artifactId>root</artifactId>
+    <version>1.0.0</version>
+    <name>root</name>
+    <description>Template Arquitetura</description>
+
+    <properties>
+        <java.version>11</java.version>
+        <testcontainers.version>1.15.3</testcontainers.version>
+        <archunit-junit5.version>0.19.0</archunit-junit5.version>
+        <junit-vintage-engine.version>5.7.2</junit-vintage-engine.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
+        <org.jacoco.core.version>0.8.5</org.jacoco.core.version>
+        <sonar-maven-plugin.version>3.6.1.1688</sonar-maven-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M9</maven-failsafe-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <sonar-maven-plugin.version>3.6.1.1688</sonar-maven-plugin.version>
+        <jib-maven-plugin.version>2.8.0</jib-maven-plugin.version>
+        <frontend-maven-plugin.version>1.12.0</frontend-maven-plugin.version>
+
+        <!--Qualidade de Código e Cobertura de Testes-->
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.organization>renatojusto</sonar.organization>
+        <sonar.language>java</sonar.language>
+        <sonar.java.source>1.8</sonar.java.source>
+        <sonar.verbose>false</sonar.verbose>
+        <sonar.showProfiling>true</sonar.showProfiling>
+        <sonar.java.codeCoveragePlugin>jacoco</sonar.java.codeCoveragePlugin>
+
+        <sonar.exclusions>
+            **/target/**,
+            **/*.xml,
+            **/*.html,
+            **/*.js,
+            **/*.css,
+            **/*Test*,
+            others/**/*.*,
+            .mvn/**/*.*,
+        </sonar.exclusions>
+
+        <sonar.coverage.exclusions>
+            **/src/main/java/com/templatestack/BackendApplication.java,
+            **/src/main/java/com/templatestack/domain/**/*.*,
+            **/src/main/java/com/templatestack/resource/errors/**/*.*,
+            **/src/main/java/com/templatestack/service/dto/**/*.*,
+            **/src/main/java/com/templatestack/service/mapper/**/*.*,
+            **/src/main/java/com/templatestack/service/dto/request/**/*.*,
+            **/src/main/java/com/templatestack/service/dto/response/**/*.*,
+            **/src/test/java/**/*.*
+        </sonar.coverage.exclusions>
+
+        <sonar.test.exclusions>
+            **/src/test/java/**/*.*
+        </sonar.test.exclusions>
+    </properties>
+
+</project>
